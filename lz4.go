@@ -39,9 +39,9 @@ const (
 	skipStrength = 6            // variable step for fast scan
 )
 
-// map the block max size id with its value in bytes: 64Kb, 256Kb, 1Mb and 4Mb.
+// map the block max size id with its value in bytes: 16Kb, 256Kb, 1Mb and 4Mb.
 var (
-	bsMapID    = map[byte]int{4: 64 << 10, 5: 256 << 10, 6: 1 << 20, 7: 4 << 20}
+	bsMapID    = map[byte]int{4: 16 << 10, 5: 256 << 10, 6: 1 << 20, 7: 4 << 20}
 	bsMapValue = make(map[int]byte, len(bsMapID))
 )
 

@@ -31,9 +31,9 @@ func NewWriter(dst io.Writer) *Writer {
 
 // writeHeader builds and writes the header (magic+header) to the underlying io.Writer.
 func (z *Writer) writeHeader() error {
-	// Default to 4Mb if BlockMaxSize is not set.
+	// Default to 16Kb if BlockMaxSize is not set.
 	if z.Header.BlockMaxSize == 0 {
-		z.Header.BlockMaxSize = bsMapID[7]
+		z.Header.BlockMaxSize = bsMapID[4]
 	}
 	// The only option that needs to be validated.
 	bSize := z.Header.BlockMaxSize
