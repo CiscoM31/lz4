@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/pierrec/lz4/internal/xxh32"
+	"github.com/CiscoM31/lz4/internal/xxh32"
 )
 
 // Writer implements the LZ4 frame encoder.
